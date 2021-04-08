@@ -39,14 +39,14 @@ export  default {
     fetchData() {
         this.loading = true
 
-        axios.get('http//localhost:3000/boards')
+        axios.get('/boards')
           .then(res => {
             this.boards = res.data
           })
           .catch(res => {
             this.$router.replace('/login')
           })
-          .finally(() => {
+          .finally(()=> {
             this.loading = false
           })
 
